@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Laser-Tag Robot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Donna Kim's Portfolio</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home/Projects</a></li>
+							<li><a href="Resume Page.html">Resume</a></li>
+							<li><a href="#contact">Contact me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Laser-Tag Robot</h1>
+							<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="images/Final Robot Body.jpg" alt="" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/Gun Design 1.jpg" alt="" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/Gun Design 3.jpg" alt="" /></span></div>
+							</div>
+							<p></p>
+							<p>
+								<b>What? </b> 
+								<br>
+								An interactive miniature desktop laser-tag robot! Made from a Lego EV3 brick, Lego components, and RobotC. As a final project for MTE100 and MTE 121 courses, the laser tag robot was a 
+								group effort with fellow Mechatronics students: Akshaya Thavakumar, David Yen, and Nithila Rajaratnam. 
+								<br><br>
+								<b> Game Play</b><br>
+								A game of laser-tag is initiated when the player chooses between the specified game intervals on the robot interface. 
+								The robot then begins gameplay and navigates the desktop surface randomly while avoiding falling off table edges. 
+								The player uses the wireless gun to take shots at the robot. If the user shoots at the robot accurately, 
+								the robot will count a point and display the final score at the end of the game. If a player chooses to terminate the game 
+								before the specified game time ends, a killswitch located on the robot will end all programs when triggered. 
+								<br><br>
+								<b>How Does it Work? </b> <br> 
+								The laser-tag system was comprised of 2 components, the robot body and the gun. The robot used 3 total motors (1 large, 2 medium) and had 4 unique types of inputs: an infared sensor, motor encoders, touch sensor, and an ultrasonic sensor.
+								<li><b>Wireless gun: </b> the robot was mounted with an infared sensor beacon and the remote contained 
+									the infared remote that sent signals when triggered. </li>
+								<li><b>Edge detection: </b>an ultrasonic sensor was mounted to the robot body on a rotating arm and detected table edges. When an edge was detected and distance threshold was surpassed, a fall-back procedure was called and the robot 
+									backed away from the table edge and continued random movements. </li>
+								<li><b>Random movements: </b>within the code for the robot, there were 3 fixed moves with variables that were chosen at random every
+									time a new iteration of movement was initiated. The random movements continued until the game time ended. 
+								</li>
+								<li><b>Killswitch:</b> within the software for the robot, there were various while loop to check for specific conditions, in these conditions 
+									was to check for if the killswitch (a touch sensor) had been triggered. 
+								</li><br> 
+								<b>Skills Applied</b>
+								<li>C language programming</li>
+								<li>Sensor/ input knowledge</li>
+								<li>Project planning and organization</li>
+								<li>Software and mechanical project proposals/ demonstrations</li>
+								<li>Group collaboration/ leadership</li>
+								<li>Time management</li>
+								<br>
+
+								<ul class="actions">
+									<li><a href="https://drive.google.com/drive/folders/1NyyL-aZhpuZWLEsTvTazwe3Rgu189PNG?usp=sharing" target="_blank" rel="noopener noreferrer" class="button">More Info</a></li>
+								</ul>
+							
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section id="contact">
+								<h2>Contact</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/DonnaKim0115" target="_blank" rel="noopener noreferrer" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/donna-kim-4936791ba/" target="_blank" rel="noopener noreferrer"class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="mailto:k.donna0115@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Donna Kim. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

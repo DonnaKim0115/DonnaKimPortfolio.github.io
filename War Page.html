@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>War Game Simulator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Donna Kim's Portfolio</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home/Projects</a></li>
+							<li><a href="Resume Page.html">Resume</a></li>
+							<li><a href="#contact">Contact me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>War Game Simulator</h1>
+							<div class="row gtr-uniform">
+								<div class="col-12"><span class="image fit"><img src="images/War Intro.png" alt="" /></span></div>	
+							</div>
+							<p></p>
+							<b>What?</b>
+							<p>A C++ program that simulates the 2 player card game War. The 2 players are given 26 cards each from a standard card deck consisting of 52 
+								cards. Players can take or lose cards dependent on the 
+								number of their opponents card. The game continues     
+								until a player has no cards remaining and a winner is declared as the player with all 52 cards. 
+							</p>
+							<b>How Does It Work? </b><br>
+							<p>Using structures, a card object is represented by its rank (ranging from 2-14) and its corresponding suit (club, diamond, heart, spade). Similarly, a structure is used to create a deck object. A deck is defined by an array of cards and the number of cards in the deck.</p>
+
+							<p>
+								<span class="image left"><img src="images/War inGame.png" alt="" /></span>
+								
+								<u>Creating a Deck</u><br>
+								A deck is made by utilizing a for loop iterating in consecutive increasing intervals from 2 to 14. 
+								Within the for loop is yet another for loop iterating between values of 1 to 4, where each value 
+								from 1-4 represents a suit. Dependent on the suit, an if statement will call upon the Card constructor and create a new card. 
+								The card is then saved to the card array in the deck object. 
+								<br><br>
+								
+								<u>Shuffling a Deck</u><br>
+									A deck is shuffled by calling a shuffle function. Within the function, a for loop iterates 52 times (starting from 0 and ending 
+									at 51), and a random card index is generated from 0-51 each time. A card from the deck at the randomly chosen index is then saved to a 
+									temporary card. The the card within the deck corresponding to the for loops iteration value will turn into the randomly chosen card 
+									from the deck (the card chosen by the random number between 0-51). Finally, the card at the randomly chosen index is replaced with the 
+									temporary card that was earlier saved. 
+								
+							</p>
+							<u>Taking a Card from a Deck</u><br>
+							A card is taken from the top of a players deck by calling a function that has the deck to remove the card from, and the index of the card in the deck
+							as its parameters. The card at the given index is removed and the card count of the deck decreases by 1. 
+							<br><br>
+							<u>Inserting a Card to a Deck</u><br>
+							A card is inserted to a deck through a function that takes the deck to insert the card to, the card index, and the card to insert
+							as its parameters. The function will move all cards in the deck beginning from the index to the total number of cards one index up in a for loop. Once all cards 
+							have been moved up in the deck, the card to be inserted is placed at the card index in the deck. 
+							<br><br>
+							<u>Dealing a Deck</u><br>
+							As War is a 2 player game, both players are made a deck object and cards are distributed from the shuffled deck containnig all 52 cards. The cards are dealt using a 
+							for loop iterating 52 times. Each iteration of an odd number will give player 1 a card and an odd iteration will give player 2 a card from the deck. This is done by calling the 
+							insertCard function for the players decks and the takeCard function for the original deck with 52 cards. 
+							<br><br>
+							<b>Skills Applied</b>
+							<li>C++ programming knowledge</li>
+							<li>Object programming</li>
+							<li>Structures</li>
+							<li>Arrays</li>
+							<li>ASCII art </li>
+
+							<br>
+							To view the code and the .exe file: 
+
+							<ul class="actions">
+								<li><a href="https://drive.google.com/drive/folders/1puiGt2scVXAloDITX-Axh5qa_emWFDdx?usp=share_link" target="_blank" rel="noopener noreferrer" class="button">More Info</a></li>
+							</ul>
+
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section id="contact">
+								<h2>Contact</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/DonnaKim0115" target="_blank" rel="noopener noreferrer" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/donna-kim-4936791ba/" target="_blank" rel="noopener noreferrer"class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="mailto:k.donna0115@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Donna Kim. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
