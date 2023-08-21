@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Battery Module</title>
+		<title>Battery Box Enclosure</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -48,32 +48,36 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>1P5S Battery Pack Module</h1>
+							<h1>Bill of Material Management Script</h1>
 							<div class="row gtr-uniform">
-							<div class="col-4"><span class="image fit"><img src="images/Fusion 360 Model SS1.png" alt="" /></span></div>
-							<div class="col-4"><span class="image fit"><img src="images/Final Pack.jpg" alt="" /></span></div>
-							<div class="col-4"><span class="image fit"><img src="images/Spot Weld.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/BOM Command Screen.png" alt="" /></span></div>
+							    <div class="col-4"><span class="image fit"><img src="images/BOM File Screen.png" alt="" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="images/BOM Missing Screen.png" alt="" /></span></div>
 							</div>
-							<br>
-							<b>What? </b> 
-								
-								<br> Reused 18650 Li-ion cells to manufacture a 1P5S (1 parallel-5 series) 20V battery module for the Midnight Sun Solar Car Team as an onboarding project. 
-								<br><br>
-								<b>How? </b> <br> 
-								Measured nominal voltage of 20+ cells using a multimeter to select appropriate cells for production, then modelled module plates in Fusion360 with spotwelding allowances in mind. Printed
-								the module plates using FDM technoloigies and proceeded to spotweld nickel strips to create the final product.  
-								<br><br>
-								<b>Skills Applied</b>
-								<li>Cell voltage testing</li>
-								<li>3D modelling</li>
-								<li>3D printing</li>
-								<li>Spot-welding</li>
-								<br>
+                            <br>
+							<b>What?</b>
+							<p>
+                                A python Script that organizes mechanical drawings, DXFs and STL files on the users operating system into a hierarchical based format that follows a given assembly list.
+                                Additionally creates a text file informing the user of missing files from the assembly list. The user will input the assembly list PDF, and the folder name they would like the 
+                                newly organized files to placed into. 
 
-								<ul class="actions">
-									<li><a href="https://drive.google.com/drive/folders/1ODZDdxroLyLxJ9KQOgX4_1b9iraC_OMJ?usp=sharing" target="_blank" rel="noopener noreferrer" class="button">More Info</a></li>
-								</ul>
+                            </p>
+							<b>How? </b><br>
+                            <p>
+								<span class="image right"><img src="images/BOM Assembly.png" alt="" /></span>
+                                Utilized Regular Expressions and PyPDF libraries to create an algorithm to read through the assembly PDF and user files to pinpoint serial numbers. The program compares the serial numbers 
+                                in the assembly list and sifts through the users files to see if there is a match. If there is not a match, it will copy the file name into a missing text file for the user and if there
+                                is a match, it will organize the file into the users folder following the sorting system. The sorting system followings the logic of the assembly list and will read the dashes infront of each 
+                                serial number and compare it to the next to see if it is a subpart of the assembly or a new assembly. The logic iterates thorughout the assembly list until all parts of the assembly have been read 
+                                and compared to the users files. 
 							
+							</p>
+							
+							<b>Skills Applied</b>
+							<li>Python</li>
+							<li>Regular Expression Library</li>
+							<li>PyPDF Library</li>
+							<li>Coding logic/ debugging</li>
 						</div>
 					</div>
 

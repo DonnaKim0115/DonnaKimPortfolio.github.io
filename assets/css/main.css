@@ -1865,6 +1865,7 @@ input, select, textarea {
 				background-color: rgba(242, 132, 158, 0.1);
 			}
 
+
 /* List */
 
 	ol {
@@ -2329,7 +2330,7 @@ div.center {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 25%;
 		}
 
 			.image.left img, .image.right img {
